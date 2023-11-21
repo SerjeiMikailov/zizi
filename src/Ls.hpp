@@ -2,6 +2,7 @@
 #include <cstring>
 #include <dirent.h>
 #include <iomanip>
+#include <unistd.h>
 
 class FileOperations
 {

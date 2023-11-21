@@ -1,6 +1,6 @@
 #include "App.hpp"
 #include "Ls.hpp"
-#include <unistd.h>
+#include "Rm.hpp"
 
 void execute_command(const std::vector<std::string> &args)
 {
@@ -24,6 +24,17 @@ void execute_command(const std::vector<std::string> &args)
         else
         {
             std::cout << "Error getting current working directory" << std::endl;
+        }
+    }
+    else if (args[0] == "rm")
+    {
+        if (args.size() < 2)
+        {
+            std::cout << "Usage: rm <file/directory>" << std::endl;
+        }
+        else
+        {
+            Rm::remove(args[1].c_str());
         }
     }
     else
