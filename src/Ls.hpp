@@ -3,12 +3,15 @@
 #include <dirent.h>
 #include <iomanip>
 
-class FileOperations {
+class FileOperations
+{
 public:
-    static void listDirectory(const char* path) {
-        DIR* dir = opendir(path);
+    static void listDirectory(const char *path)
+    {
+        DIR *dir = opendir(path);
 
-        if (dir == NULL) {
+        if (dir == NULL)
+        {
             std::cout << "Error to open the directory" << std::endl;
             return;
         }
@@ -23,16 +26,20 @@ public:
     }
 
 private:
-    static int getMaxNameLength(DIR* dir, const char* path) {
+    static int getMaxNameLength(DIR *dir, const char *path)
+    {
         int maxNameLength = 0;
-        struct dirent* entry;
+        struct dirent *entry;
 
-        while ((entry = readdir(dir)) != NULL) {
-            if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
+        while ((entry = readdir(dir)) != NULL)
+        {
+            if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0)
+            {
                 char fullPath[PATH_MAX];
                 snprintf(fullPath, PATH_MAX, "%s/%s", path, entry->d_name);
                 int nameLength = strlen(fullPath);
-                if (nameLength > maxNameLength) {
+                if (nameLength > maxNameLength)
+                {
                     maxNameLength = nameLength;
                 }
             }
@@ -41,11 +48,14 @@ private:
         return maxNameLength;
     }
 
-    static void printDirectoryContents(DIR* dir, int maxNameLength) {
-        struct dirent* entry;
+    static void printDirectoryContents(DIR *dir, int maxNameLength)
+    {
+        struct dirent *entry;
 
-        while ((entry = readdir(dir)) != NULL) {
-            if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
+        while ((entry = readdir(dir)) != NULL)
+        {
+            if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0)
+            {
                 std::cout << std::left << std::setw(maxNameLength + 2) << entry->d_name << std::endl;
             }
         }
