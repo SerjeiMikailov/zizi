@@ -2,6 +2,11 @@
 #include "Ls.hpp"
 #include "Rm.hpp"
 
+extern "C" 
+{
+    #include "reworks.h"
+}
+
 void execute_command(const std::vector<std::string> &args)
 {
     if (args.empty())
@@ -35,6 +40,19 @@ void execute_command(const std::vector<std::string> &args)
         else
         {
             Rm::remove(args[1].c_str());
+        }
+    }
+    else if (args[0] == "cd")
+    {
+        if (args.size() < 2)
+        {
+            std::cout << "Usage: cd <directory>" << std::endl;
+        }
+        else
+        {
+            // Convert string to const char*
+            const char *directory = args[1].c_str();
+            cd(directory);
         }
     }
     else
