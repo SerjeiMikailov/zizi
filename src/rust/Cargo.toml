@@ -1,0 +1,10 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2021"
+
+[build]
+target-dir = "build"
+
+[dependencies]
+rusqlite = "0.30.0"

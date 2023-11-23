@@ -17,6 +17,7 @@ Stable v1
 int main() 
 {
     std::string input;
+    system("clear");    
 
     while (true) 
     {
