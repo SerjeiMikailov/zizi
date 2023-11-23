@@ -19,6 +19,13 @@ for source_file in "$source_dir"/*.cpp; do
     fi
 done
 
+cd src
+
+clang -c sysinfo.c -o ../build/sysinfo.o
+clang -c reworks.c -o ../build/reworks.o
+
+cd ..
+
 # Change to the output directory and compile all .o files into the "main" executable
 cd "$output_dir"
 clang++ *.o -o main
