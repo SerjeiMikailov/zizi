@@ -20,7 +20,7 @@ int main()
 
     while (true) 
     {
-        std::cout << "-> ";
+        layout();
 
         std::getline(std::cin, input);
 

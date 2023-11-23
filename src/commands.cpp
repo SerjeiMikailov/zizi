@@ -2,11 +2,6 @@
 #include "Ls.hpp"
 #include "Rm.hpp"
 
-extern "C"
-{
-#include "reworks.h"
-}
-
 void execute_command(const std::vector<std::string> &args)
 {
     if (args.empty())
