@@ -2,9 +2,9 @@
 #include "Ls.hpp"
 #include "Rm.hpp"
 
-extern "C" 
+extern "C"
 {
-    #include "reworks.h"
+#include "reworks.h"
 }
 
 void execute_command(const std::vector<std::string> &args)
@@ -57,6 +57,30 @@ void execute_command(const std::vector<std::string> &args)
     }
     else
     {
-        std::cout << "Unknown command: " << args[0] << std::endl;
+        std::string fullCommand;
+        for (const auto &arg : args)
+        {
+            fullCommand += arg + " ";
+        }
+
+        FILE *pipe = popen(fullCommand.c_str(), "r");
+        if (!pipe)
+        {
+            std::cerr << "Error executing command." << std::endl;
+            return;
+        }
+
+        char buffer[128];
+        std::string result = "";
+
+        while (!feof(pipe))
+        {
+            if (fgets(buffer, 128, pipe) != NULL)
+                result += buffer;
+        }
+
+        pclose(pipe);
+
+        std::cout << result << std::endl;
     }
 }
