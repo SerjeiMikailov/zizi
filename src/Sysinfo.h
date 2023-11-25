@@ -13,8 +13,8 @@ extern void getProcessorInfo();
 extern void getProcessorCores();
 extern void print_processor_arch();
 extern void print_memory_usage();
-extern char* get_user();
-extern char* working_dir();
+// extern char* get_user();
+// extern char* working_dir();
 extern void layout();
 
 #endif

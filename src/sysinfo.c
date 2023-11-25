@@ -123,6 +123,7 @@ void print_memory_usage(void) {
     }
 }
 
+/*
 char* get_user() {
     return getenv("USER");
 }
@@ -147,3 +148,4 @@ void layout()
     printf("\033[1;32m%s\033[0m:", user);
     printf("\033[1;34m%s\033[0m -> ", folder);
 }
+*/
