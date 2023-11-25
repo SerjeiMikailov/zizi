@@ -12,7 +12,7 @@ void execute_command(const std::vector<std::string> &args)
 
     if (args[0] == "zz" && args.size() == 2 && args[1] == "--v")
     {
-        std::cout << "Zizi_Shell v1.0" << std::endl;
+        std::cout << "Zizi_Shell v1.2" << std::endl;
     }
     else if (args[0] == "ls")
     {
@@ -49,6 +49,10 @@ void execute_command(const std::vector<std::string> &args)
             const char *directory = args[1].c_str();
             cd(directory);
         }
+    }
+    else if (args[0] == "clear")
+    {
+      system("clear"); 
     }
     else
     {

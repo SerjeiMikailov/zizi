@@ -4,6 +4,7 @@
 #include <vector>
 #include <iterator>
 #include <sstream>
+#include <fstream>
 
 extern "C"
 {
@@ -12,3 +13,5 @@ extern "C"
 }
 
 void execute_command(const std::vector<std::string>& args);
+
+void layout_change();
