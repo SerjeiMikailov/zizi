@@ -25,6 +25,9 @@ clang -c sysinfo.c -o ../build/sysinfo.o
 clang -c reworks.c -o ../build/reworks.o
 
 cd ..
+cd config 
+
+cd ..
 
 # Change to the output directory and compile all .o files into the "main" executable
 cd "$output_dir"
@@ -33,4 +36,3 @@ clang++ *.o -o main
 # Run the compiled program
 ./main
 
-echo "Compilation completed successfully"
