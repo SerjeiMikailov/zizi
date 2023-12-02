@@ -4,6 +4,20 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
+/*
+----------------------------------
+|                                |
+|             ZiziSh             |
+|                                |
+|          Version 1.3           |
+|                                |
+----------------------------------
+
+First build version
+Stable v1.3
+
+*/
+
 int main()
 {
     system("clear");

@@ -12,7 +12,7 @@ void execute_command(const std::vector<std::string> &args)
 
     if (args[0] == "zz" && args.size() == 2 && args[1] == "--v")
     {
-        std::cout << "Zizi_Shell v1.2" << std::endl;
+        std::cout << "Zizi_Shell v1.3" << std::endl;
     }
     else if (args[0] == "ls")
     {
