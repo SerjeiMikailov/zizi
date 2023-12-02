@@ -1,8 +1,5 @@
 #include "App.hpp"
 #include "../config/config.hpp"
-#include <iostream>
-#include <readline/readline.h>
-#include <readline/history.h>
 
 /*
 ----------------------------------

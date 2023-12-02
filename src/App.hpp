@@ -9,6 +9,8 @@
 #include <chrono>
 #include <future>
 #include <ncurses.h>
+#include <readline/readline.h>
+#include <readline/history.h>
 
 extern "C"
 {
