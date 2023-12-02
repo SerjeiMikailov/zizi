@@ -1,4 +1,3 @@
-#!/bin/bash
 
 source_dir="src"
 output_dir="build"
@@ -31,7 +30,7 @@ cd ..
 
 # Change to the output directory and compile all .o files into the "main" executable
 cd "$output_dir"
-clang++ *.o -o main
+clang++ *.o -o main -lreadline
 
 # Run the compiled program
 ./main

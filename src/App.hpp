@@ -5,6 +5,10 @@
 #include <iterator>
 #include <sstream>
 #include <fstream>
+#include <thread>
+#include <chrono>
+#include <future>
+#include <ncurses.h>
 
 extern "C"
 {

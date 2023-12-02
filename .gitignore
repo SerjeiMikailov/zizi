@@ -2,4 +2,8 @@ main
 *.o
 .vscode
 target/
+
 json.hpp
+conio.h
+conio.c
+curses.h

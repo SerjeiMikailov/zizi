@@ -36,6 +36,6 @@ public:
     std::string folder = Working_Dir();
 
     std::cout << "\033[1;32m" << user << "\033[0m:";
-    std::cout << "\033[1;34m" << folder << "\033[0m -> ";
+    std::cout << "\033[1;34m" << folder << "\033[0m" << std::endl;
   }
 };
