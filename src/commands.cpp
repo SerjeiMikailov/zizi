@@ -45,14 +45,14 @@ void execute_command(const std::vector<std::string> &args)
         }
         else
         {
-            // Convert string to const char*
+            // convert string to const char*
             const char *directory = args[1].c_str();
             cd(directory);
         }
     }
     else if (args[0] == "clear")
     {
-      system("clear"); 
+      clear(); 
     }
     else
     {

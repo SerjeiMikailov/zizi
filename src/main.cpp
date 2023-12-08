@@ -17,7 +17,7 @@ Stable v1.3
 
 int main()
 {
-    system("clear");
+    clear();
 
     while (true)
     {
