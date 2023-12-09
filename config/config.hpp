@@ -50,6 +50,7 @@ public:
     }
     else if (layout == 2)
     {
+      Layout::Layout2();
     }
   }
 };

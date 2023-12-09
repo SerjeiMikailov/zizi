@@ -17,6 +17,8 @@
 #include <thread>
 #include <chrono>
 #include <future>
+#include <ctime>
+#include <iomanip>
 
 #include <readline/readline.h>
 #include <readline/history.h>

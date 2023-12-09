@@ -23,7 +23,7 @@ int main()
     {
         Config::layout_change();
 
-        char *input = readline(" -> ");
+        char *input = readline("-> % ");
         if (!input)
         {
             std::cout << std::endl;
