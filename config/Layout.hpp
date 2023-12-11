@@ -1,21 +1,19 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include <vector>
-#include <iterator>
 #include <sstream>
-#include <fstream>
 #include <unistd.h>
+#include <iomanip>
 
 class Layout
 {
 private:
   static std::string LocalTime()
   {
-    std::time_t currentTime;
-    std::time(&currentTime);
+    time_t currentTime;
+    time(&currentTime);
 
-    struct std::tm *localTime = std::localtime(&currentTime);
+    struct tm *localTime = localtime(&currentTime);
 
     if (localTime != nullptr)
     {

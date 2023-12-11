@@ -52,7 +52,11 @@ void execute_command(const std::vector<std::string> &args)
     }
     else if (args[0] == "clear")
     {
-      clear(); 
+        clear(); 
+    }
+    else if (args[0] == "exit")
+    {
+        std::exit(0); 
     }
     else
     {
